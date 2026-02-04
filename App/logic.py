@@ -156,42 +156,32 @@ def last_book(catalog):
 
 def add_book_tags_file(catalog, booktagsfile):
     """
-    Esta funcion guardar los booktags provenientes del archivo CSV.
-
-    :param catalog: Catalogo de la aplicación
-    :type catalog: dict
-    :param booktagsfile: Nombre del archivo csv con los booktags
-    :type booktagsfile: str
-
-    :returns: catalog
-    :rtype: dict
+    Esta función guardar los booktags provenientes del archivo CSV.
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+    catalog["book_tags"] = set.new_set()
+    return catalog
+
 
 
 def create_book_tag_list(catalog):
     """
-    Esta funcion crea una lista vacia para booktags.
+    Esta función crea una lista vacía para booktags.
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+    catalog["book_tags"] = set.new_set()
+    return catalog
+
 
 
 def add_book_tag(catalog, booktag):
     """
-    Esta funcion agrega un elemento a lista de booktags.
-
-    :param catalog: Catalogo de la aplicación
-    :type catalog: dict
-    :param booktag: Tag a agregar
-    :type booktag: dict
-
-    :returns: catalog
-    :rtype: dict
+    Esta función agrega un elemento a lista de booktags.
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+    set.add_element(catalog["book_tags"], booktag)
+    return catalog
+
 
 
 # Funciones de consulta
