@@ -38,7 +38,7 @@ The students edit this section to add their names, Uniandes emails, and specify 
 
 1. Student No. 1 Inti Zamir Cruz, i.cruzy@uniandes.edu.co, Estudiante 1
 1. Student No. 2 Samuel Higuera, s.hiiguera11@uniandes.edu.co, Estudiante 2
-1. Student No. 3 Juanfelipe Lozano, j.lozanod2@uniandes.edu.co, Estudiante 3
+1. Student No. 3 Juanfelipe Lozano, j.lozanod2@uniandes.edu.co, Estudiante 3.
 
 
 
