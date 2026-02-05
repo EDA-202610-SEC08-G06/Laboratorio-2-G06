@@ -88,24 +88,28 @@ def load_tags(app):
     return tags
 
 
-def load_books_tags(app):
+def load_books_tags(control, filename):
     """
-    Función que carga los tags de los libros en la aplicación.
-    Carga los tags de los libros desde el archivo book_tags-small.csv y los almacena en la aplicación
-
-    :param app: Aplicación de la lógica
-    :type app: logic
+    Carga la información que asocia tags con libros.
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+    catalog = control["model"]
+    booksfile = os.path.join(cf.data_dir, filename)
+    catalog = model.addBookTags(catalog, booksfile)
+    return model.bookTagSize(catalog)
 
 
-def first_book(app):
+
+def first_book(control):
     """
-    Devuelve el primer libro cargado en el conjunto de libros
+    Devuelve el primer libro del catalogo
     """
-    # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+    # TODO: Mods de Est-2 en el Lab 2
+    first = first_book(control)
+    print("Primer libro cargado:\n" + str(first) + "\n")
+
+
+
 
 
 def last_book(app):
