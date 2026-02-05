@@ -62,31 +62,22 @@ def print_menu():
     print("0- Salir")
 
 
-def load_books(app):
+def load_books(control):
     """
-    Función que carga los libros en la aplicación. 
-    Carga los libros desde el archivo books-small.csv y los almacena en la aplicación
-
-    :param app: Aplicación de la lógica
-    :type app: logic
+    Carga los libros
     """
-    books = logic.load_books(app,
-                             "GoodReads/books-small.csv")
+    books = controller.load_books(control,
+    "GoodReads/books.csv")
     return books
 
-
-def load_tags(app):
+def loadBooksTags(control):
     """
-    Función que carga los tags en la aplicación.
-    Carga los tags desde el archivo tags.csv y los almacena en la aplicación
-
-    :param app: Aplicación de la lógica
-    :type app: logic
+    Cargar los Tags de libros
     """
-    tags = logic.load_tags(app,
-                           "GoodReads/tags.csv")
-    return tags
-
+    # TODO: Modificaciones de Est-1 en el Lab 2
+    booktags = controller.load_books_tags(control,
+    "GoodReads/book_tags.csv")
+    return booktags
 
 def load_books_tags(control, filename):
     """
