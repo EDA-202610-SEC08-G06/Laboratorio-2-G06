@@ -133,6 +133,12 @@ def load_books_tags(catalog, filename):
     :rtype: int
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
+    tf=os.path.join(data_dir,filename)
+    input_file=csv.DictReader(open(tf,encoding="utf=8"))
+    catalog["model"] = create_book_tag_list(catalog["model"])
+    for booktag in input_file:
+        add_book_tag(catalog, booktag)
+        return book_tag_size(catalog)
     pass
 
 
@@ -148,7 +154,7 @@ def last_book(catalog):
     """
     Devuelve el ultimo libro del catalogo
     """
-    # TODO: Mods Est-3 en el Lab 2
+    # TODO: Mods Est-3 en el Lab 2  
     pass
 
 # Funciones para la manipulacion de los datos
@@ -167,6 +173,9 @@ def add_book_tags_file(catalog, booktagsfile):
     :rtype: dict
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
+    bt = set.load_set(set.new_set(), booktagsfile)
+    catalog["book_tags"] = bt
+    return catalog
     pass
 
 
